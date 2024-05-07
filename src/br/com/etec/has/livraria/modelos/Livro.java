@@ -3,7 +3,7 @@ package br.com.etec.has.livraria.modelos;
 import br.com.etec.has.livraria.enums.TipoCapaEnum;
 import br.com.etec.has.livraria.modelos.Editora;
 
-public abstract class Livro {
+public abstract class Livro implements Exemplar {
     private String titulo;
     private String sinopse;
     protected double valor;
@@ -63,5 +63,9 @@ public abstract class Livro {
 
     public void setEditora(Editora editora) {
         this.editora = editora;
+    }
+
+    public double getValor() {
+        return valor;
     }
 }

@@ -38,6 +38,13 @@ public class CriaLivro {
         SacolaCompras sacola = new SacolaCompras();
         sacola.adicionar(primeiroLivro);
         sacola.adicionar(livrodigital);
+
+        Revista primeiraRevista = new Revista();
+        primeiraRevista.setTitulo("Correx Diário");
+        primeiraRevista.setValor(15.99);
+
+        sacola.adicionar(primeiraRevista);
+
     }
 }
 

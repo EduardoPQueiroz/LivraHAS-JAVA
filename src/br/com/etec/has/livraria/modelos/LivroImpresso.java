@@ -29,4 +29,9 @@ public class LivroImpresso extends Livro{
         System.out.println("Tipo de capa: " + tipoCapa);
         System.out.println("Taxa de Envio: " + formataValor(getTaxaEnvio()));
     }
+
+    @Override
+    public double getValor() {
+        return valor;
+    }
 }

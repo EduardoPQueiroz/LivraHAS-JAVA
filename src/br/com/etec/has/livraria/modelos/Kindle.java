@@ -16,4 +16,10 @@ public class Kindle extends Livro {
     double descontoLivro(double valorDescontado){
         return valor - (valor * 0.15);
     }
+
+    @Override
+    public double getValor() {
+        return valor;
+    }
 }
+
