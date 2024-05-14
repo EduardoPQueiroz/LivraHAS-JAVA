@@ -1,6 +1,7 @@
 package br.com.etec.has.livraria.modelos;
+//André Nogueira Pissuto e Eduardo Pereira de Queiroz - 2AI
 
-public class Kindle extends Livro {
+public class Kindle extends Livro implements Oferta{
     private String marcaDAgua;
 
     @Override

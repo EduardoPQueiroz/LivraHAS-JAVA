@@ -1,5 +1,5 @@
 package br.com.etec.has.livraria.construtores;
-
+//André Nogueira Pissuto e Eduardo Pereira de Queiroz - 2AI
 import java.sql.SQLOutput;
 
 import br.com.etec.has.livraria.enums.TipoCapaEnum;
@@ -7,6 +7,7 @@ import br.com.etec.has.livraria.modelos.*;
 
 public class CriaLivro {
     public static void main(String[] args) {
+        //Instanciando Editoras
         Editora rocco = new Editora();
         rocco.setNome("Rocco");
         rocco.setSite("http://www.rocco.com.br");
@@ -15,6 +16,7 @@ public class CriaLivro {
         rocco.setNome("JamalBooks");
         rocco.setSite("http://www.rocco.com.br");
 
+        //Instanciando LivroImpresso
         LivroImpresso primeiroLivro = new LivroImpresso();
         primeiroLivro.setTitulo("Harry Potter e as preda");
         primeiroLivro.setSinopse("Uma pá de magia");
@@ -26,6 +28,7 @@ public class CriaLivro {
         primeiroLivro.cobrarCapa();
         primeiroLivro.exibirLivro();
 
+        //Instanciando Kindle
         Kindle livrodigital = new Kindle();
         livrodigital.setTitulo("A Ilíada de Correx");
         livrodigital.setAutor("Luuca Kenzou");
@@ -35,16 +38,22 @@ public class CriaLivro {
         livrodigital.setMarcaDAgua("Jamaal");
         livrodigital.exibirLivro();
 
+        //Adicionando na Sacola
         SacolaCompras sacola = new SacolaCompras();
         sacola.adicionar(primeiroLivro);
         sacola.adicionar(livrodigital);
 
+        //Instanciando Revista
         Revista primeiraRevista = new Revista();
         primeiraRevista.setTitulo("Correx Diário");
         primeiraRevista.setValor(15.99);
 
+        //Adicionando Revista na Sacola
         sacola.adicionar(primeiraRevista);
 
+        //Instanciando, e adicionando LivroCortesia na sacola de compras
+        LivroCortesia livroCortesia = new LivroCortesia("CorrexNéVIDAS");
+        sacola.adicionar(livroCortesia);
     }
 }
 

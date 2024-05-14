@@ -1,8 +1,9 @@
 package br.com.etec.has.livraria.modelos;
+//André Nogueira Pissuto e Eduardo Pereira de Queiroz - 2AI
 
 import br.com.etec.has.livraria.enums.TipoCapaEnum;
 
-public class LivroImpresso extends Livro{
+public class LivroImpresso extends Livro implements Oferta{
     private TipoCapaEnum tipoCapa;
     double getTaxaEnvio(){
         return valor * 0.05;
@@ -33,5 +34,9 @@ public class LivroImpresso extends Livro{
     @Override
     public double getValor() {
         return valor;
+    }
+
+    public static void aplicarDesconto(Desconto desconto){
+
     }
 }
