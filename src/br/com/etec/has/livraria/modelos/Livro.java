@@ -1,6 +1,8 @@
 package br.com.etec.has.livraria.modelos;
 
 import br.com.etec.has.livraria.enums.TipoCapaEnum;
+import br.com.etec.has.livraria.exceptions.CampoObrigatorioException;
+import br.com.etec.has.livraria.exceptions.ValorNegativoException;
 import br.com.etec.has.livraria.modelos.Editora;
 
 public abstract class Livro implements Exemplar {
@@ -36,10 +38,16 @@ public abstract class Livro implements Exemplar {
     }
 
     public void setValor(double valor){
+        if (valor < 0){
+            throw new ValorNegativoException("O valor já é negativo, quer mais desconto? ta viajando.");
+        }
         this.valor = valor;
 //        cobrarCapa();
     }
     public void setTitulo(String titulo){
+        if (titulo == null || titulo == ""){
+            throw new CampoObrigatorioException("Esse campo precisa obrigatoriamente ser preenchido!!");
+        }
         this.titulo = titulo;
     }
     public String getTitulo() {

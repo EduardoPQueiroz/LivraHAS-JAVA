@@ -1,5 +1,7 @@
 package br.com.etec.has.livraria.modelos;
 
+import br.com.etec.has.livraria.exceptions.NomeEditoraException;
+
 public class Editora {
     private String nome;
     private String site;
@@ -11,6 +13,10 @@ public class Editora {
     }
 
     public void setNome(String nome) {
+        int qtd_carac = nome.length();
+        if (qtd_carac > 3){
+            throw new NomeEditoraException("Tem muita letra nesse nome aí man");
+        }
         this.nome = nome;
     }
 
