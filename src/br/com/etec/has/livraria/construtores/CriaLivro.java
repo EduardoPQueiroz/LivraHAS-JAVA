@@ -9,11 +9,11 @@ public class CriaLivro {
     public static void main(String[] args) {
         //Instanciando Editoras
         Editora rocco = new Editora();
-        rocco.setNome("Rocco");
+        rocco.setNome("Roc");
         rocco.setSite("http://www.rocco.com.br");
 
         Editora JamalBooks = new Editora();
-        rocco.setNome("JamalBooks");
+        rocco.setNome("Jam");
         rocco.setSite("http://www.rocco.com.br");
 
         //Instanciando LivroImpresso
@@ -32,6 +32,7 @@ public class CriaLivro {
         Kindle livrodigital = new Kindle();
         livrodigital.setTitulo("A Ilíada de Correx");
         livrodigital.setAutor("Luuca Kenzou");
+        livrodigital.setValor(75.00);
         livrodigital.setEditora(JamalBooks);
         livrodigital.setSinopse("A grande história de Correx na bahia.");
         livrodigital.setQtdPaginas(123);
@@ -54,6 +55,8 @@ public class CriaLivro {
         //Instanciando, e adicionando LivroCortesia na sacola de compras
         LivroCortesia livroCortesia = new LivroCortesia("CorrexNéVIDAS");
         sacola.adicionar(livroCortesia);
+
+        sacola.exibirItens();
     }
 }
 
